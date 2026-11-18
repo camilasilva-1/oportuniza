@@ -238,3 +238,14 @@
 .password-field { position: relative; } .password-field input { padding-right: 78px !important; } .password-toggle { position: absolute; right: 8px; top: 8px; height: 31px; border: 0; border-radius: 5px; padding: 0 8px; background: #edf8f7; color: #147c70; cursor: pointer; font-size: .7rem; font-weight: 700; } .form-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -2px 0 24px; } .remember { display: flex !important; align-items: center; gap: 5px; margin: 0 !important; font-weight: 500 !important; } .remember input { accent-color: var(--green); } .forgot-link { border: 0; padding: 0; color: var(--blue); background: transparent; cursor: pointer; font-size: .74rem; font-weight: 700; } .auth-submit { min-height: 50px; border-radius: 8px; box-shadow: 0 9px 18px rgba(20,108,148,.18); } .auth-submit span { margin-left: auto; font-size: 1.1rem; } .auth-card .notice { border: 1px solid #f1dcae; } .auth-switch { margin-top: 27px; }
 @media (max-width: 850px) { .header-inner { min-height: 70px; } .auth-page { grid-template-columns: minmax(340px, 520px); min-height: auto; padding: 36px 15px 70px; } .auth-visual { min-height: 235px; padding: 32px 30px; border-radius: 18px 18px 0 0; } .auth-visual-mark { width: 43px; height: 43px; margin-bottom: 28px; border-radius: 13px 13px 13px 4px; font-size: 1.2rem; } .auth-visual h2 { font-size: 1.75rem; max-width: 450px; margin-bottom: 8px; } .auth-visual p { max-width: 450px; margin-bottom: 0; } .visual-route { margin-top: 18px; } .auth-card { min-height: 0; padding: 38px 30px; border-left: 1px solid rgba(209,225,233,.9); border-top: 0; border-radius: 0 0 18px 18px; } }
 @media (max-width: 560px) { .auth-page { padding: 20px 15px 45px; } .auth-visual { padding: 27px 23px; } .auth-visual h2 { font-size: 1.45rem; } .auth-visual p { font-size: .82rem; } .auth-card { padding: 30px 23px; } .form-row { align-items: flex-start; flex-direction: column; gap: 10px; } }
+
+/* Keep opportunity metadata readable when values are missing or long. */
+.card-footer { align-items: flex-start; flex-wrap: wrap; }
+.deadline { min-width: 0; }
+.free-tag { white-space: nowrap; }
+
+@media (max-width: 850px) {
+  .opportunity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .filters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .filters label { min-width: 0; }
+}
